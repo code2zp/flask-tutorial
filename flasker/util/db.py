@@ -10,7 +10,8 @@ class OperationMysql:
     # 数据库查询
     def select_mysql(self, sql_str):
         try:
-            cursor = self.db.cursor()
+            # cursor=pymysql.cursors.DictCursor 获取字典形式的mysql数据
+            cursor = self.db.cursor(cursor=pymysql.cursors.DictCursor)
             cursor.execute(sql_str)
             results = cursor.fetchall()
             # 关闭数据库

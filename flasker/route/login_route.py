@@ -1,5 +1,6 @@
-from flask import Blueprint
+from flask import Blueprint,request
 from flasker.service.login_service import LoginService
+import json
 
 # 定义蓝图
 login = Blueprint('login', __name__)
@@ -13,4 +14,5 @@ def hello():
 
 @login.route('/get_user_data', methods=['GET','POST'])
 def get_user_data():
-    return LoginService().get_user_data()
+    print(request.data)
+    return LoginService().get_user_data(json.loads(str(request.data,encoding='utf-8')))
