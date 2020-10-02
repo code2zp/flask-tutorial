@@ -47,7 +47,7 @@ if __name__ == '__main__':
     sql_str = 'select * from flask_project.user'
     result = OperationMysql().select_mysql(sql_str)
     print(result)
-    sql_str = "insert into zb_table(dbcode, id, isParent, zb_name, pid, wdcode) values (%s,%s,%s,%s,%s,%s)"
-    insert_data = (('hgyd', 'A01', 'aaa', '价格指数', '', 'zb'), ('hgyd', 'A0D', 'True', '金融', '', 'zb'))
-    result = OperationMysql().insert_mysql(sql_str, insert_data)
-    print(result)
+    # sql_str = "insert into zb_table(dbcode, id, isParent, zb_name, pid, wdcode) values (%s,%s,%s,%s,%s,%s)"
+    # insert_data = (('hgyd', 'A01', 'aaa', '价格指数', '', 'zb'), ('hgyd', 'A0D', 'True', '金融', '', 'zb'))
+    # result = OperationMysql().insert_mysql(sql_str, insert_data)
+    # print(result)
